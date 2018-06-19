@@ -1,17 +1,15 @@
 package system.model;
 
-/**
- * Created by Max on 16.07.2017.
- */
-public class User {
+
+public class Employee {
     private String name;
     private String password;
 
-    public User() {
+    public Employee() {
 
     }
 
-    public User(String name, String password) {
+    public Employee(String name, String password) {
         this.name = name;
         this.password = password;
     }
@@ -34,7 +32,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Employee{" +
                 "name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 '}';
