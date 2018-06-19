@@ -12,7 +12,7 @@ public class EmployeeSearchService {
     @Autowired
     private EmployeeDao employeeDao;
 
-    public List<Employee> getAllEmployees() {
-        return employeeDao.getAllEmployees();
-    }
+//    public List<Employee> getAllEmployees() {
+//        return employeeDao.getAllEmployees();
+//    }
 }

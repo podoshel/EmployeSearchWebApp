@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import system.model.Employee;
+import system.model.SearchQuery;
 import system.service.EmployeeSearchService;
-
-import java.util.List;
 
 
 @Controller
@@ -28,15 +27,15 @@ public class EmployeeController {
     @RequestMapping(value = "/validate", method = RequestMethod.GET)
     public ModelAndView validateUser() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("employeeFromServer", new Employee());
+        modelAndView.addObject("searchQuery", new SearchQuery());
         modelAndView.setViewName("employees_result_page");
         return modelAndView;
     }
 
     @RequestMapping(value = "/check", method = RequestMethod.POST)
     public @ResponseBody
-    String checkUser(@ModelAttribute("employeeFromServer") Employee employee) {
-        if ("admin".equals(employee.getName()) && "admin".equals(employee.getPassword())) {
+    String checkUser(@ModelAttribute("searchQuery") SearchQuery searchQuery) {
+        if ("admin".equals(searchQuery.getFirstName()) && "admin".equals(searchQuery.getSecondName())) {
             return "valid";
         }
         return "invalid";

@@ -1,42 +1,39 @@
 package system.model;
 
-
-public class Employee {
+public class SearchQuery {
     private String firstName;
     private String secondName;
     private String position;
     private String department;
-    private String mail;
 
-    public Employee() {}
+    public SearchQuery() {}
 
-    public Employee(String firstName, String secondName, String position, String department, String mail) {
+    public SearchQuery(String firstName, String secondName, String position, String department) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.position = position;
         this.department = department;
-        this.mail = mail;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getSecondName() {
         return secondName;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
+    public String getPosition() {
+        return position;
+    }
+
+    public String getDepartment() {
+        return department;
     }
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "SearchQuery{" +
                 "firstName='" + firstName + '\'' +
                 ", secondName='" + secondName + '\'' +
                 ", position='" + position + '\'' +

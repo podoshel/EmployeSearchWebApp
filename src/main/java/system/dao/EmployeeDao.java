@@ -8,11 +8,11 @@ import java.util.List;
 
 @Repository
 public class EmployeeDao {
-    private List<Employee> employees = Arrays.asList(
-            new Employee("admin", "admin"),
-            new Employee("user1", "user1"));
-
-    public List<Employee> getAllEmployees() {
-        return employees;
-    }
+//    private List<Employee> employees = Arrays.asList(
+//            new Employee("admin", "admin"),
+//            new Employee("user1", "user1"));
+//
+//    public List<Employee> getAllEmployees() {
+//        return employees;
+//    }
 }

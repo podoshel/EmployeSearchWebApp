@@ -20,10 +20,14 @@
             <h1>Search for company employees</h1>
             <p class="lead">Enter information about employee and the search returns matches</p>
             <div align="center" class="form-inline">
-                <spring:form modelAttribute="employeeFromServer" method="post" action="/employee-system/search/check">
-                    <p><spring:input path="name" placeholder="Login"
+                <spring:form modelAttribute="searchQuery" method="post" action="/employee-system/search/check">
+                    <p><spring:input path="firstName" placeholder="First name"
                                      type="text" class="form-control input-lg" size="45"/></p>
-                    <p><spring:input path="password" placeholder="Password"
+                    <p><spring:input path="secondName" placeholder="Second name"
+                                     type="text" class="form-control input-lg" size="45"/></p>
+                    <p><spring:input path="position" placeholder="Position"
+                                     type="text" class="form-control input-lg" size="45"/></p>
+                    <p><spring:input path="department" placeholder="Department"
                                      type="text" class="form-control input-lg" size="45"/></p>
                     <p><spring:button class="btn btn-lg btn-default">Check</spring:button></p>
                 </spring:form>
